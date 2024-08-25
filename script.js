@@ -66,7 +66,7 @@ function updateDOM(data){
     console.log("After");
 }
 async function fetchWeather(locationInput) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=757c93d9e13d4343bb5184758242408&q=${locationInput}&aqi=no`
+    const url = `https://api.weatherapi.com/v1/current.json?key=757c93d9e13d4343bb5184758242408&q=${locationInput}&aqi=no`
     const response = await fetch(url)
     if (response.status == 400) {
         alert("Location is Invalid");
