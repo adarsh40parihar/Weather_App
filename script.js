@@ -37,7 +37,8 @@ async function fetchcurrentWeather() {
 
 
 // for async function use then type or use await but for await you also need to write async in below function.
-searchBtn.addEventListener("click", async function(){
+
+async function fectchWeatherInput(){
     const locationInput = searchInput.value;
     if(locationInput){
         // fetchWeather(locationInput).then((data)=>{
@@ -50,7 +51,14 @@ searchBtn.addEventListener("click", async function(){
         }
         searchInput.value="";
     }
-})
+}
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        searchBtn.click();
+    }
+});
+
+searchBtn.addEventListener("click", fectchWeatherInput)
 function updateDOM(data){
     temperature.textContent = data.current.temp_c + "°C";
     locationShown.textContent = data.location.name;

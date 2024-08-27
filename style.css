@@ -35,10 +35,10 @@ html{
 #currentLocationSvg{
     height: 1.5rem;
     fill: white;
-    transition-duration: 0.1s;
+    transition-duration: 0.2cs;
     background-color: transparent;
     &:hover{
-        transform: scale(120%);
+        transform: scale(140%);
         color: red;
         border-radius: 50%;
         padding: 2px;
